@@ -1,0 +1,661 @@
+Title 
+Straight-Through and Cross-Over Cable Configuration 
+Aim 
+To prepare and test Straight-Through and Cross-Over Ethernet cables using UTP cable and RJ-45 
+connectors for network communication. 
+Apparatus Required 
+1. UTP (Unshielded Twisted Pair) Cable (Cat5e/Cat6) 
+2. RJ-45 Connectors 
+3. Crimping Tool 
+4. Cable Tester 
+5. Wire Stripper/Cutter 
+6. Two Computers or Network Devices 
+7. Switch/Hub (for testing Straight-Through cable) 
+Theory 
+Ethernet cables are used to connect devices in a computer network. The two commonly used cable 
+configurations are: 
+Straight-Through Cable 
+ Used to connect different types of devices. 
+ Example: PC to Switch, Router to Switch. 
+ Both ends follow the same wiring standard (T568A–T568A or T568B–T568B). 
+Cross-Over Cable 
+ Used to connect similar devices directly. 
+ Example: PC to PC, Switch to Switch. 
+ One end follows T568A and the other end follows T568B. 
+Color Coding Standards 
+T568A Standard 
+1. White-Green 
+2. Green 
+3. White-Orange 
+4. Blue 
+5. White-Blue 
+6. Orange 
+7. White-Brown 
+8. Brown 
+T568B Standard 
+1. White-Orange 
+2. Orange 
+3. White-Green 
+4. Blue 
+5. White-Blue 
+6. Green 
+7. White-Brown 
+8. Brown 
+Procedure 
+Part A: Straight-Through Cable 
+1. Cut the UTP cable to the required length. 
+2. Strip approximately 2 cm of the outer insulation from both ends. 
+3. Untwist and arrange the wires according to the T568B standard. 
+4. Trim the wires evenly. 
+5. Insert the wires into an RJ-45 connector. 
+6. Use the crimping tool to secure the connector. 
+7. Repeat the same T568B arrangement on the other end. 
+8. Test the cable using a cable tester. 
+9. Connect a PC to a switch and verify network connectivity. 
+Part B: Cross-Over Cable 
+1. Prepare one end using the T568A standard. 
+2. Prepare the other end using the T568B standard. 
+3. Crimp RJ-45 connectors on both ends. 
+4. Test the cable using a cable tester. 
+5. Connect two PCs directly using the cable. 
+6. Assign IP addresses and verify communication using the ping command. 
+Observation 
+Straight-Through Cable 
+Pin Number End A (T568B) End B (T568B) 
+1 
+White-Orange 
+2 
+Orange 
+White-Orange 
+Orange 
+3 
+White-Green 
+White-Green 
+4 
+Blue 
+Blue 
+5 
+White-Blue 
+6 
+Green 
+White-Blue 
+Green 
+7 
+White-Brown 
+8 
+Brown 
+White-Brown 
+Brown 
+Cross-Over Cable 
+Pin Number End A (T568A) End B (T568B) 
+1 
+White-Green 
+White-Orange 
+2 
+Green 
+Orange 
+3 
+White-Orange 
+4 
+Blue 
+White-Green 
+Blue 
+5 
+White-Blue 
+White-Blue 
+6 
+Orange 
+Green 
+7 
+White-Brown 
+8 
+Brown 
+White-Brown 
+Brown 
+Result 
+Successfully prepared and tested Straight-Through and Cross-Over Ethernet cables. Network 
+connectivity was verified through cable testing and successful communication between connected 
+devices. 
+Experiment No. 2 
+Title 
+IP Address Configuration and Network Testing 
+Aim 
+To configure IP addresses on computers and verify network connectivity using network testing 
+commands. 
+Apparatus Required 
+1. Two or more Computers 
+2. Switch/Hub 
+3. Straight-Through Ethernet Cables 
+4. Network Interface Cards (NICs) 
+5. Windows/Linux Operating System 
+Theory 
+An IP (Internet Protocol) address is a unique logical address assigned to a device on a network. 
+Devices within the same network must have unique IP addresses and the same subnet mask to 
+communicate directly. 
+Common network testing utilities include: 
+ ipconfig (Windows): Displays IP configuration details. 
+ ping: Tests connectivity between two devices. 
+ tracert/traceroute: Displays the route taken by packets. 
+ arp: Displays and manages the Address Resolution Protocol cache. 
+Network Configuration 
+PC-1 
+ IP Address: 192.168.1.10 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.1.1 
+PC-2 
+ IP Address: 192.168.1.20 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.1.1 
+Procedure 
+Part A: Configure IP Address 
+1. Connect the computers using a switch and Ethernet cables. 
+2. Open Network and Sharing Center. 
+3. Select Change Adapter Settings. 
+4. Right-click Ethernet and select Properties. 
+5. Select Internet Protocol Version 4 (TCP/IPv4) and click Properties. 
+6. Choose Use the following IP address. 
+7. Enter the IP Address, Subnet Mask, and Default Gateway. 
+8. Click OK and save the settings. 
+9. Repeat the process for the second computer using a different IP address. 
+Part B: Verify IP Configuration 
+1. Open Command Prompt. 
+2. Type: 
+ipconfig 
+3. Verify that the configured IP address and subnet mask are displayed correctly. 
+Part C: Test Network Connectivity 
+1. Open Command Prompt on PC-1. 
+2. Execute: 
+ping 192.168.1.20 
+3. Observe the replies received from PC-2. 
+4. Open Command Prompt on PC-2. 
+5. Execute: 
+ping 192.168.1.10 
+6. Verify successful communication. 
+Part D: Display Routing Information 
+1. Execute: 
+tracert 192.168.1.20 
+2. Observe the route followed by packets. 
+Observations 
+IP Configuration 
+Device IP Address Subnet Mask Default Gateway 
+PC-1 192.168.1.10 255.255.255.0 192.168.1.1 
+PC-2 192.168.1.20 255.255.255.0 192.168.1.1 
+Ping Test Result 
+Source Destination Status 
+PC-1 PC-2 Successful 
+PC-2 PC-1 Successful 
+Result 
+Successfully configured IP addresses on networked computers and verified network connectivity 
+using the ipconfig, ping, and tracert commands. Communication between devices was established 
+successfully. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Experiment No. 3 
+Title 
+Network Device Configuration (Hub, Switch, and Router) 
+Aim 
+To study and configure basic network devices such as Hub, Switch, and Router and understand their 
+role in a computer network. 
+Apparatus Required 
+1. Hub 
+2. Switch 
+3. Router 
+4. Two or More Computers 
+5. UTP Ethernet Cables 
+6. Cisco Packet Tracer (Optional) 
+7. Console Cable (for Router Configuration) 
+Theory 
+Hub 
+A Hub is a Layer 1 (Physical Layer) networking device that connects multiple computers in a 
+network. It broadcasts incoming data to all connected devices without filtering. 
+Switch 
+A Switch is a Layer 2 (Data Link Layer) device that forwards data only to the intended destination 
+using MAC addresses. It reduces network traffic and collisions. 
+Router 
+A Router is a Layer 3 (Network Layer) device that connects different networks and forwards 
+packets based on IP addresses. It determines the best path for data transmission. 
+Procedure 
+Part A: Hub Configuration and Testing 
+1. Connect two or more computers to the Hub using Ethernet cables. 
+2. Configure IP addresses on all computers within the same network. 
+Example: 
+Computer IP Address Subnet Mask 
+PC-1 192.168.1.10 255.255.255.0 
+PC-2 192.168.1.20 255.255.255.0 
+3. Open Command Prompt. 
+4. Verify connectivity using: 
+ping 192.168.1.20 
+5. Observe successful communication between computers. 
+Part B: Switch Configuration and Testing 
+1. Connect all computers to the Switch. 
+2. Assign IP addresses within the same subnet. 
+3. Verify physical connectivity through switch port LEDs. 
+4. Test communication using the ping command. 
+5. Observe improved performance compared to a Hub. 
+Part C: Router Configuration 
+1. Connect the Router to the computer using a console cable. 
+2. Open terminal software (PuTTY/Tera Term). 
+3. Access Router CLI. 
+4. Enter privileged mode: 
+Router> enable 
+5. Enter global configuration mode: 
+Router# configure terminal 
+6. Configure the router interface: 
+Router(config)# interface gigabitethernet0/0 
+Router(config-if)# ip address 192.168.1.1 255.255.255.0 
+Router(config-if)# no shutdown 
+7. Exit configuration mode: 
+Router(config-if)# exit 
+Router(config)# exit 
+8. Save configuration: 
+Router# write memory 
+9. Configure PCs with the router IP address as the default gateway. 
+10. Verify connectivity between the PCs and the router using: 
+ping 192.168.1.1 
+Result 
+Successfully studied and configured Hub, Switch, and Router devices. Network connectivity was 
+verified using the ping command, and router interface configuration was completed successfully. 
+
+
+Experiment No. 4 
+Title 
+LAN Setup Using Different Network Topologies 
+Aim 
+To set up a Local Area Network (LAN) using different network topologies and study their operation 
+and performance. 
+Apparatus Required 
+1. Computers (4 or more) 
+2. Hub/Switch 
+3. Router (optional) 
+4. UTP Ethernet Cables 
+5. RJ-45 Connectors 
+6. Crimping Tool 
+7. Network Interface Cards (NICs) 
+8. Cisco Packet Tracer (optional) 
+Theory 
+A Network Topology refers to the physical or logical arrangement of devices in a network. 
+Different topologies provide different levels of performance, reliability, and scalability. 
+Star Topology 
+ All devices are connected to a central switch or hub. 
+ Easy to install and manage. 
+ Failure of one cable does not affect the entire network. 
+Bus Topology 
+ All devices share a common communication cable. 
+ Simple and inexpensive. 
+ Failure of the backbone cable affects the entire network. 
+Ring Topology 
+ Devices are connected in a circular manner. 
+ Data travels from one node to another around the ring. 
+ Failure of one node may affect communication. 
+Mesh Topology 
+ Every device is connected to every other device. 
+ Provides high reliability and fault tolerance. 
+ Requires a large number of connections. 
+Procedure 
+Part A: Star Topology Setup 
+1. Connect all computers to a central switch using straight-through cables. 
+2. Assign IP addresses in the same subnet. 
+Computer IP Address 
+PC-1 192.168.1.10 
+PC-2 192.168.1.11 
+PC-3 192.168.1.12 
+PC-4 192.168.1.13 
+3. Verify connectivity using the ping command. 
+4. Record the results. 
+Part B: Bus Topology Simulation 
+1. Create a Bus topology using network simulation software such as Cisco Packet Tracer. 
+2. Assign IP addresses to all nodes. 
+3. Send packets between devices. 
+4. Observe data transmission. 
+Part C: Ring Topology Simulation 
+1. Connect devices in a ring configuration using Packet Tracer. 
+2. Configure IP addresses. 
+3. Test communication between nodes. 
+4. Observe packet flow around the ring. 
+Part D: Mesh Topology Simulation 
+1. Connect each device with every other device. 
+2. Configure IP addresses. 
+3. Verify communication between all devices. 
+4. Observe fault tolerance characteristics. 
+Observations 
+Star Topology 
+Source Destination Result 
+PC-1 PC-2 Successful 
+PC-1 PC-3 Successful 
+PC-1 PC-4 Successful 
+Bus Topology 
+Test Result 
+Data Transmission Successful 
+Backbone Failure Network Failure 
+Ring Topology 
+Test 
+Result 
+Data Transmission Successful 
+Node Failure 
+Communication Affected 
+Mesh Topology 
+Test 
+Result 
+Data Transmission Successful 
+Link Failure 
+Alternate Path Available 
+Result 
+Successfully set up and studied a Local Area Network (LAN) using different network topologies 
+namely Star, Bus, Ring, and Mesh. Connectivity between devices was verified and the 
+characteristics of each topology were observed. 
+Experiment No. 5 
+Title 
+Router Configuration Using Cisco Packet Tracer 
+Aim 
+To configure a Cisco Router using Cisco Packet Tracer and establish communication between two 
+different networks. 
+Apparatus Required 
+1. Computer with Cisco Packet Tracer installed 
+2. One Cisco Router (e.g., 2911 Router) 
+3. Two Switches 
+4. Four PCs 
+5. Copper Straight-Through Cables 
+Theory 
+A Router is a Layer 3 (Network Layer) device used to connect different networks. It forwards 
+packets based on IP addresses and routing tables. Cisco Packet Tracer provides a simulation 
+environment for configuring and testing routers without physical hardware. 
+Network Diagram 
+Network 1: 
+ PC0: 192.168.1.10/24 
+ PC1: 192.168.1.11/24 
+ Gateway: 192.168.1.1 
+Network 2: 
+ PC2: 192.168.2.10/24 
+ PC3: 192.168.2.11/24 
+ Gateway: 192.168.2.1 
+Router Interfaces: 
+ GigabitEthernet0/0 → 192.168.1.1/24 
+ GigabitEthernet0/1 → 192.168.2.1/24 
+Procedure 
+Step 1: Create Network Topology 
+1. Open Cisco Packet Tracer. 
+2. Place one Router, two Switches, and four PCs in the workspace. 
+3. Connect: 
+o PC0 and PC1 to Switch0. 
+o PC2 and PC3 to Switch1. 
+o Switch0 to Router GigabitEthernet0/0. 
+o Switch1 to Router GigabitEthernet0/1. 
+Step 2: Configure IP Addresses on PCs 
+PC0 
+ IP Address: 192.168.1.10 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.1.1 
+PC1 
+ IP Address: 192.168.1.11 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.1.1 
+PC2 
+ IP Address: 192.168.2.10 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.2.1 
+PC3 
+ IP Address: 192.168.2.11 
+ Subnet Mask: 255.255.255.0 
+ Default Gateway: 192.168.2.1 
+Step 3: Configure Router Interfaces 
+Open Router CLI and enter the following commands: 
+Router> enable 
+Router# configure terminal 
+Router(config)# interface gigabitethernet0/0 
+Router(config-if)# ip address 192.168.1.1 255.255.255.0 
+Router(config-if)# no shutdown 
+Router(config-if)# exit 
+Router(config)# interface gigabitethernet0/1 
+Router(config-if)# ip address 192.168.2.1 255.255.255.0 
+Router(config-if)# no shutdown 
+Router(config-if)# exit 
+Router(config)# exit 
+Router# write memory 
+Step 4: Verify Router Configuration 
+Display interface information: 
+Router# show ip interface brief 
+Expected Output: 
+Interface              IP Address      Status 
+GigabitEthernet0/0     192.168.1.1     up 
+GigabitEthernet0/1     192.168.2.1     up 
+Step 5: Test Connectivity 
+From PC0: 
+ping 192.168.2.10 
+From PC2: 
+ping 192.168.1.10 
+Result 
+Successfully configured a Cisco Router in Cisco Packet Tracer and established communication 
+between two different IP networks. The configured router forwarded packets correctly between the 
+networks.
+
+
+Experiment No. 6 
+Static and Dynamic Routing Using Cisco Packet Tracer 
+Aim 
+To configure and verify Static Routing and Dynamic Routing between multiple networks using 
+Cisco Packet Tracer. 
+Apparatus Required 
+1. Computer with Cisco Packet Tracer installed 
+2. Three Cisco Routers 
+3. Three Switches 
+4. Three PCs 
+5. Copper Straight-Through Cables 
+Theory 
+Static Routing 
+Static Routing is a routing technique in which routes are manually configured by the network 
+administrator. It is suitable for small networks and provides greater control over routing paths. 
+Dynamic Routing 
+Dynamic Routing automatically learns and updates routes using routing protocols such as RIP, 
+OSPF, and EIGRP. 
+Network Topology 
+Device Interface IP Address 
+Router0 G0/0 192.168.1.1/24 
+Router0 G0/1 10.0.0.1/30 
+Router1 G0/0 10.0.0.2/30 
+Router1 G0/1 10.0.0.5/30 
+Router2 G0/0 10.0.0.6/30 
+Router2 G0/1 192.168.3.1/24 
+PC0 NIC 192.168.1.10/24 
+PC2 NIC 192.168.3.10/24 
+Procedure 
+Part A: Configure Router Interfaces 
+Router0 
+enable 
+configure terminal 
+ 
+interface g0/0 
+ip address 192.168.1.1 255.255.255.0 
+no shutdown 
+ 
+interface g0/1 
+ip address 10.0.0.1 255.255.255.252 
+no shutdown 
+Router1 
+enable 
+configure terminal 
+interface g0/0 
+ip address 10.0.0.2 255.255.255.252 
+no shutdown 
+interface g0/1 
+ip address 10.0.0.5 255.255.255.252 
+no shutdown 
+Router2 
+enable 
+configure terminal 
+interface g0/0 
+ip address 10.0.0.6 255.255.255.252 
+no shutdown 
+interface g0/1 
+ip address 192.168.3.1 255.255.255.0 
+no shutdown 
+Part B: Static Routing Configuration 
+Router0 
+ip route 192.168.3.0 255.255.255.0 10.0.0.2 
+Router1 
+ip route 192.168.1.0 255.255.255.0 10.0.0.1 
+ip route 192.168.3.0 255.255.255.0 10.0.0.6 
+Router2 
+ip route 192.168.1.0 255.255.255.0 10.0.0.5 
+Verify Static Routes 
+show ip route 
+Test Connectivity 
+From PC0: 
+ping 192.168.3.10 
+Successful replies indicate proper routing. 
+Part C: Dynamic Routing Configuration (RIP Version 2) 
+Remove Static Routes (Optional) 
+no ip route network-address subnet-mask next-hop 
+Router0 
+router rip 
+version 2 
+network 192.168.1.0 
+network 10.0.0.0 
+no auto-summary 
+Router1 
+router rip 
+version 2 
+network 10.0.0.0 
+no auto-summary 
+Router2 
+router rip 
+version 2 
+network 192.168.3.0 
+network 10.0.0.0 
+no auto-summary 
+Verify RIP Routes 
+show ip route 
+Routes learned through RIP are marked with the letter R. 
+Test Connectivity 
+ping 192.168.3.10 
+Result 
+Successfully configured and verified both Static Routing and Dynamic Routing (RIP Version 2) 
+using Cisco Packet Tracer. Communication between different networks was established 
+successfully through both routing methods. 
+
+
+Experiment No. 7 
+Title 
+DNS and DHCP Configuration Using Cisco Packet Tracer 
+Aim 
+To configure DNS (Domain Name System) and DHCP (Dynamic Host Configuration Protocol) 
+services and verify automatic IP address assignment and domain name resolution. 
+Apparatus Required 
+1. Computer with Cisco Packet Tracer installed 
+2. One Router 
+3. One Switch 
+4. Two PCs 
+5. One Server 
+6. Copper Straight-Through Cables 
+Theory 
+DHCP (Dynamic Host Configuration Protocol) 
+DHCP is a network protocol used to automatically assign IP addresses, subnet masks, default 
+gateways, and DNS server addresses to client devices. 
+Advantages: 
+ Automatic IP configuration 
+ Reduces administrative effort 
+ Prevents IP address conflicts 
+DNS (Domain Name System) 
+DNS translates human-readable domain names (e.g., www.example.com) into IP addresses that 
+computers use for communication. 
+Network Topology 
+Device 
+Router 
+IP Address 
+Server (DNS & DHCP) 192.168.1.2 
+192.168.1.1 
+PC0 
+PC1 
+DHCP Assigned 
+DHCP Assigned 
+Subnet Mask: 255.255.255.0 
+Default Gateway: 192.168.1.1 
+DNS Server: 192.168.1.2 
+Procedure 
+Part A: Create the Network 
+1. Open Cisco Packet Tracer. 
+2. Add one Router, one Switch, one Server, and two PCs. 
+3. Connect all devices using straight-through cables. 
+4. Configure the Router interface: 
+enable 
+configure terminal 
+interface g0/0 
+ip address 192.168.1.1 255.255.255.0 
+no shutdown 
+exit 
+write memory 
+Part B: Configure DHCP Server 
+Server Configuration 
+1. Click on the Server. 
+2. Select Desktop → IP Configuration. 
+3. Assign: 
+Parameter 
+IP Address 
+Value 
+192.168.1.2 
+Subnet Mask 
+Default Gateway 192.168.1.1 
+255.255.255.0 
+4. Open Services → DHCP. 
+5. Turn DHCP Service ON. 
+Configure DHCP Pool: 
+Parameter 
+Pool Name 
+Value 
+LAN_POOL 
+Default Gateway 192.168.1.1 
+DNS Server 
+Start IP Address 192.168.1.100 
+192.168.1.2 
+Subnet Mask 
+Maximum Users 50 
+255.255.255.0 
+6. Click Add. 
+Part C: Configure DNS Server 
+1. Select Services → DNS. 
+2. Turn DNS Service ON. 
+3. Add a DNS record: 
+Name 
+www.college.com
+Address 
+192.168.1.2 
+4. Click Add. 
+Part D: Configure Client PCs 
+PC0 
+1. Desktop → IP Configuration. 
+2. Select DHCP. 
+PC1 
+1. Desktop → IP Configuration. 
+2. Select DHCP. 
+Observe that IP addresses are assigned automatically. 
+Example: 
+PC0 
+Device Assigned IP 
+192.168.1.100 
+PC1 
+192.168.1.101 
+Part E: Verification 
+Verify DHCP Assignment 
+On PC0: 
+ipconfig 
+Check the assigned IP address, gateway, and DNS server. 
+Test Connectivity 
+ping 192.168.1.2 
+Successful replies indicate proper connectivity. 
+Verify DNS Resolution 
+Open Web Browser on PC0 and enter: 
+www.college.com 
+The DNS server should resolve the domain name to the server IP address. 
+Result 
+Successfully configured DHCP and DNS services using Cisco Packet Tracer. Client PCs obtained 
+IP addresses automatically through DHCP, and domain names were resolved successfully using the 
+DNS server.
