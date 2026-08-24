@@ -1,45 +1,33 @@
 #include <iostream>
 using namespace std;
 
-class Student {
-private:
-    int rollNo;
-
-protected:
-    string course;
-
+class Employee {
 public:
-    string name;
-    int age;
-
-    void input() {
-        cout << "Enter Roll No: ";
-        cin >> rollNo;
-
-        cout << "Enter Name: ";
-        cin >> name;
-
-        cout << "Enter Age: ";
-        cin >> age;
-
-        cout << "Enter Course: ";
-        cin >> course;
-    }
-
-    void display() {
-        cout << "\n--- Student Information ---" << endl;
-        cout << "Roll No: " << rollNo << endl;
+    void display(string name, int id, double salary) {
+        cout << "\n--- Employee Information ---" << endl;
         cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-        cout << "Course: " << course << endl;
+        cout << "ID: " << id << endl;
+        cout << "Salary: " << salary << endl;
     }
 };
 
 int main() {
-    Student s;
+    Employee e;
 
-    s.input();
-    s.display();
+    string name;
+    int id;
+    double salary;
+
+    cout << "Enter Employee Name: ";
+    cin >> name;
+
+    cout << "Enter Employee ID: ";
+    cin >> id;
+
+    cout << "Enter Salary: ";
+    cin >> salary;
+
+    e.display(name, id, salary);
 
     return 0;
 }
