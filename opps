@@ -2,51 +2,39 @@
 using namespace std;
 
 class Student {
-private:
     string name;
     int age;
-    float marks;
 
 public:
-    void input() {
-        cout << "Enter Name: ";
+    void get() {
+        cout << "Enter name: ";
         cin >> name;
-
-        cout << "Enter Age: ";
+        cout << "Enter age: ";
         cin >> age;
-
-        cout << "Enter Marks: ";
-        cin >> marks;
     }
 
-    void display() {
+    void show() {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
-        cout << "Marks: " << marks << endl;
     }
 };
 
 int main() {
-    int n;
+    Student s1, s2, s3;   // Multiple objects
 
-    cout << "Enter number of students: ";
-    cin >> n;
+    cout << "Student 1\n";
+    s1.get();
 
-    Student s[n];   // Multiple objects
+    cout << "\nStudent 2\n";
+    s2.get();
 
-    // User input
-    for (int i = 0; i < n; i++) {
-        cout << "\nStudent " << i + 1 << endl;
-        s[i].input();
-    }
+    cout << "\nStudent 3\n";
+    s3.get();
 
-    // Display information
-    cout << "\n--- Student Information ---\n";
-
-    for (int i = 0; i < n; i++) {
-        cout << "\nStudent " << i + 1 << endl;
-        s[i].display();
-    }
+    cout << "\n--- Details ---\n";
+    s1.show();
+    s2.show();
+    s3.show();
 
     return 0;
 }
