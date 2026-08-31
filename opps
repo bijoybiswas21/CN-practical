@@ -1,40 +1,55 @@
 #include <iostream>
 using namespace std;
-class Employee
-{
-    private:
-    string Empname;
-    int Empid;
-    int EmpSalary;
 
-    public:
-    Employee (string n, int i, float s)
-    {
-        Empname=n;
-        Empid=i;
-        EmpSalary=s;
+class Student {
+private:
+    string name;
+    int age;
+    int marks;
+
+public:
+    void setData(string n, int a, int m) {
+        name = n;
+        age = a;
+        marks = m;
     }
 
-    public:
-    void display()
-    {
-        cout << "The Name Of The Employee Is: " << Empname << endl;
-        cout << "The ID number of the Employee is: " << Empid << endl;
-        cout << "The Salary of the Employee is: "<< EmpSalary << endl;
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Marks: " << marks << endl;
+        cout << "------------------" << endl;
     }
 };
-int main ()
-{
-    string Empname;
-    int Empid;
-    float EmpSalary;
-    cout << "Enter the name of the Employee: "<< endl;
-    cin >> Empname;
-    cout << "Enter the ID number of the Employee: " << endl;
-    cin >> Empid;
-    cout << "Enter the Salary of the Employee: "<< endl;
-    cin >> EmpSalary;
-    Employee e1(Empname,Empid,EmpSalary);
-    e1.display();
+
+int main() {
+    Student s[3];
+
+    // Input using loop
+    for (int i = 0; i < 3; i++) {
+        string name;
+        int age, marks;
+
+        cout << "Enter details of Student " << i + 1 << endl;
+
+        cout << "Name: ";
+        cin >> name;
+
+        cout << "Age: ";
+        cin >> age;
+
+        cout << "Marks: ";
+        cin >> marks;
+
+        s[i].setData(name, age, marks);
+    }
+
+    // Display using loop
+    cout << "\nStudent Details\n";
+
+    for (int i = 0; i < 3; i++) {
+        s[i].display();
+    }
+
     return 0;
 }
