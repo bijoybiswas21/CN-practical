@@ -5,49 +5,46 @@ class Student {
 private:
     string name;
     int age;
-    int marks;
+    float marks;
 
 public:
-    void setData(string n, int a, int m) {
-        name = n;
-        age = a;
-        marks = m;
+    void input() {
+        cout << "Enter Name: ";
+        cin >> name;
+
+        cout << "Enter Age: ";
+        cin >> age;
+
+        cout << "Enter Marks: ";
+        cin >> marks;
     }
 
     void display() {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
         cout << "Marks: " << marks << endl;
-        cout << "------------------" << endl;
     }
 };
 
 int main() {
-    Student s[3];
+    int n;
 
-    // Input using loop
-    for (int i = 0; i < 3; i++) {
-        string name;
-        int age, marks;
+    cout << "Enter number of students: ";
+    cin >> n;
 
-        cout << "Enter details of Student " << i + 1 << endl;
+    Student s[n];   // Multiple objects
 
-        cout << "Name: ";
-        cin >> name;
-
-        cout << "Age: ";
-        cin >> age;
-
-        cout << "Marks: ";
-        cin >> marks;
-
-        s[i].setData(name, age, marks);
+    // User input
+    for (int i = 0; i < n; i++) {
+        cout << "\nStudent " << i + 1 << endl;
+        s[i].input();
     }
 
-    // Display using loop
-    cout << "\nStudent Details\n";
+    // Display information
+    cout << "\n--- Student Information ---\n";
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < n; i++) {
+        cout << "\nStudent " << i + 1 << endl;
         s[i].display();
     }
 
