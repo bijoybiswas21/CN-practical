@@ -1,40 +1,13 @@
-#include <iostream>
-using namespace std;
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
 
-class Student {
-    string name;
-    int age;
-
-public:
-    void get() {
-        cout << "Enter name: ";
-        cin >> name;
-        cout << "Enter age: ";
-        cin >> age;
-    }
-
-    void show() {
-        cout << "Name: " << name << endl;
-        cout << "Age: " << age << endl;
-    }
-};
-
-int main() {
-    Student s1, s2, s3;   // Multiple objects
-
-    cout << "Student 1\n";
-    s1.get();
-
-    cout << "\nStudent 2\n";
-    s2.get();
-
-    cout << "\nStudent 3\n";
-    s3.get();
-
-    cout << "\n--- Details ---\n";
-    s1.show();
-    s2.show();
-    s3.show();
-
-    return 0;
-}
+if a>b and a>c and a>d:
+    print(a)
+elif b>c and b>d:
+    print(b)
+elif c>d:
+    print(c)
+else:
+    print(d)
