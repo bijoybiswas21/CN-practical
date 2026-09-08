@@ -1,13 +1,48 @@
-a=int(input())
-b=int(input())
-c=int(input())
-d=int(input())
-
-if a>b and a>c and a>d:
-    print(a)
-elif b>c and b>d:
-    print(b)
-elif c>d:
-    print(c)
-else:
-    print(d)
+e:/CPAIS/
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   ├── assets/
+│   │   └── nielit_logo.svg
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── PlacementContext.jsx
+│   ├── data/
+│   │   ├── initialData.js (students, drives, applications, recruiters, stats)
+│   ├── services/
+│   │   └── aiShortlistingEngine.js (NLP skill extraction, TF-IDF / Cosine similarity)
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── TopHeader.jsx
+│   │   │   ├── RoleSwitcher.jsx
+│   │   │   └── Modal.jsx
+│   │   ├── charts/
+│   │   │   ├── PlacementStatsChart.jsx
+│   │   │   └── CompanyParticipationChart.jsx
+│   │   ├── landing/
+│   │   │   ├── LandingPage.jsx
+│   │   │   ├── HeroSection.jsx
+│   │   │   └── SynopsisModal.jsx
+│   │   ├── auth/
+│   │   │   └── AuthModal.jsx
+│   │   ├── student/
+│   │   │   ├── StudentDashboard.jsx
+│   │   │   ├── BrowseJobs.jsx
+│   │   │   ├── MyApplications.jsx
+│   │   │   └── StudentProfile.jsx
+│   │   ├── recruiter/
+│   │   │   ├── RecruiterDashboard.jsx
+│   │   │   ├── PostJobModal.jsx
+│   │   │   └── AIShortlistingView.jsx
+│   │   └── tpo/
+│   │       ├── TPODashboard.jsx
+│   │       ├── ManageStudents.jsx
+│   │       └── PlacementReports.jsx
