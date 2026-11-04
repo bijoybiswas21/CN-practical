@@ -1,31 +1,9 @@
-Certainly. Here is a properly formatted and grammatically corrected version of the application shown in your image. I have kept the same purpose and details while making the language formal.
+choice = input("Study or Sleep? ")
 
-Application for Transfer of Bank Account to Another Branch
-
-To
-The Branch Manager
-Tripura Gramin Bank
-Udaipur Branch
-Gomati, Tripura
-
-Subject: Application for Transfer of Bank Account to Another Branch
-
-Respected Sir/Madam,
-
-I am maintaining a Savings Account with your branch bearing Account No. [Your Account Number]. I have been operating this account for several years.
-
-Due to my job transfer and change of address, I would like to transfer my bank account from the present branch to Udaipur Branch, having IFSC Code [IFSC Code].
-
-Therefore, I kindly request you to transfer my bank account to the above-mentioned branch at the earliest. I shall be grateful for your kind cooperation.
-
-Thanking you.
-
-Yours faithfully,
-
-Tanmayananda Brahmachari
-Rajarbaug, P.S. R.K. Pur
-Gomati, Tripura – 799120
-Mobile: [Mobile Number]
-
-Date: ____________
-Signature: ____________
+if choice.lower() == "study":
+    print("Excellent choice! 📚")
+    print("But first... let's check Instagram 😂")
+elif choice.lower() == "sleep":
+    print("Best decision according to your pillow 😴🏆")
+else:
+    print("Brain has chosen confusion 🤯😂")
